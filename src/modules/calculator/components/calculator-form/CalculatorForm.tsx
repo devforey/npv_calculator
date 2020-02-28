@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react';
 import CalculatorFormField from '../calculator-form-field/CalculatorFormField';
 
-interface CalculatorPanelProps {
+interface CalculatorFormProps {
     formData: CalculatorFormData,
     onChange: OnCalculatorFormChange
 }
@@ -16,7 +16,7 @@ export interface CalculatorFormData {
 
 export type OnCalculatorFormChange = (calculatorFormData: CalculatorFormData) => void;
 
-const CalculatorPanel = ({ formData, onChange }: CalculatorPanelProps) => {
+const CalculatorForm = ({ formData, onChange }: CalculatorFormProps) => {
     
     const render = () => {
         return <div className="
@@ -97,4 +97,4 @@ const CalculatorPanel = ({ formData, onChange }: CalculatorPanelProps) => {
 
 };
 
-export default CalculatorPanel;
+export default CalculatorForm;

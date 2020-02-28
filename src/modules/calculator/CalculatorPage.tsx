@@ -1,5 +1,5 @@
 import React from 'react';
-import CalculatorPanel, { CalculatorFormData } from './components/calculator-panel/CalculatorPanel';
+import CalculatorForm, { CalculatorFormData } from './components/calculator-form/CalculatorForm';
 import CalculatorResultPanel from './components/calculator-result-panel/CalculatorResultPanel';
 import useCalculator from './hooks/use-calculator';
 
@@ -8,7 +8,7 @@ const CalculatorPage = () => {
         calculatorFormData, 
         setCalculatorFormData,
         calculatorResult
-    ] = useCalculator({} as CalculatorFormData);
+    ] = useCalculator();
 
     const render = () => {
         return <div className="
@@ -18,7 +18,7 @@ const CalculatorPage = () => {
             flex
             flex-row
         ">
-            <CalculatorPanel
+            <CalculatorForm
                 formData={calculatorFormData}
                 onChange={handleCalculatorFormDataChange}
             />

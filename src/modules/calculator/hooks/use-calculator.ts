@@ -1,9 +1,9 @@
 import { useState, useEffect, Dispatch } from 'react';
-import { CalculatorFormData } from '../components/calculator-panel/CalculatorPanel';
+import { CalculatorFormData } from '../components/calculator-form/CalculatorForm';
 import CalculatorService from '../services/calculator-service';
 import CalculatorMapper from '../services/calculator-mapper';
 
-const useCalculator = (initialCalculatorFormData: CalculatorFormData)
+const useCalculator = (initialCalculatorFormData: CalculatorFormData = {})
     : [CalculatorFormData, Dispatch<CalculatorFormData>, number] => {
 
     const [calculatorFormData, setCalculatorFormData] = useState<CalculatorFormData>(initialCalculatorFormData);

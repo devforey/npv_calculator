@@ -8,7 +8,6 @@ interface CalculatorFormField {
 
 const CalculatorFormField = ({
     label,
-    className,
     ...props
 }: CalculatorFormField & React.InputHTMLAttributes<HTMLElement>) => {
     return <div className="mb-4">

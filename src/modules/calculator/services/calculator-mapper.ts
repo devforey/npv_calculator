@@ -1,4 +1,4 @@
-import { CalculatorFormData } from '../components/calculator-panel/CalculatorPanel';
+import { CalculatorFormData } from '../components/calculator-form/CalculatorForm';
 import CalculatorInputModel from './calculator-input-model';
 
 const CalculatorMapper = () => {
