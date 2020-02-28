@@ -10,7 +10,7 @@ const CalculatorPanel = () => {
         h-full
 
         flex
-        flex-column
+        flex-col
         items-center
         justify-center
     ">
