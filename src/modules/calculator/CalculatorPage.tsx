@@ -8,7 +8,9 @@ const CalculatorPage = () => {
         calculatorFormData, 
         setCalculatorFormData,
         calculatorResult
-    ] = useCalculator();
+    ] = useCalculator({
+        cashFlows: [0]
+    } as CalculatorFormData);
 
     const render = () => {
         return <div className="

@@ -7,9 +7,7 @@ const CalculatorMapper = () => {
         return {
             initialInvestment: formData.initialInvestment || 0,
             rate: formData.rate || 0,
-            cashFlow1: formData.cashFlow1 || 0,
-            cashFlow2: formData.cashFlow2 || 0,
-            cashFlow3: formData.cashFlow3 || 0,
+            cashFlows: formData.cashFlows
         } as CalculatorInputModel;
     };
 
