@@ -3,6 +3,10 @@ import CalculatorForm, { CalculatorFormData } from './components/calculator-form
 import CalculatorResultPanel from './components/calculator-result-panel/CalculatorResultPanel';
 import useCalculator from './hooks/use-calculator';
 
+/**
+ * Didn't bother adding NPV or NetPresentValue prefix to all the classes/components names
+ * since only NPV is calculated but that would be a good improvement.
+ */
 const CalculatorPage = () => {
     const [
         calculatorFormData, 
