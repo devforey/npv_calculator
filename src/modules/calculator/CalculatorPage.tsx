@@ -9,7 +9,7 @@ const CalculatorPage = () => {
         setCalculatorFormData,
         calculatorResult
     ] = useCalculator({
-        cashFlows: [0]
+        cashFlows: [0, 0, 0, 0, 0]
     } as CalculatorFormData);
 
     const render = () => {
@@ -20,14 +20,14 @@ const CalculatorPage = () => {
             flex
             flex-row
         ">
+            <CalculatorResultPanel
+                result={calculatorResult}
+            />
             <CalculatorForm
                 formData={calculatorFormData}
                 onChange={handleCalculatorFormDataChange}
             />
-            <CalculatorResultPanel
-                result={calculatorResult}
-            />
-        </div>;    
+        </div>;
     };
 
     const handleCalculatorFormDataChange = (calculatorFormData: CalculatorFormData) => {

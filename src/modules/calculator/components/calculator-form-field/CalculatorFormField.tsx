@@ -1,16 +1,24 @@
 import React from 'react';
 import Input from '../../../../components/input/Input';
+import classNames from 'classnames';
 
 interface CalculatorFormField {
     label: String;
     placeholder: string;
+    containerClassName?: string;
 }
 
 const CalculatorFormField = ({
     label,
+    containerClassName,
     ...props
 }: CalculatorFormField & React.InputHTMLAttributes<HTMLElement>) => {
-    return <div className="mb-4">
+    const containerClassNames = classNames(
+        'mb-4',
+        containerClassName
+    );
+
+    return <div className={containerClassNames}>
         <label className="
             block 
             text-gray-700 
