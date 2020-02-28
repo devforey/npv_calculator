@@ -6,7 +6,8 @@ import CalculatorMapper from '../services/calculator-mapper';
 const useCalculator = (initialCalculatorFormData: CalculatorFormData = { cashFlows: [0] })
     : [CalculatorFormData, Dispatch<CalculatorFormData>, number] => {
 
-    const [calculatorFormData, setCalculatorFormData] = useState<CalculatorFormData>(initialCalculatorFormData);
+    const [calculatorFormData, setCalculatorFormData] 
+        = useState<CalculatorFormData>(initialCalculatorFormData);
     const [calculatorResult, setCalculatorResult] = useState<number | undefined>(0);
 
     const calculatorService = CalculatorService();
