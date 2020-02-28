@@ -9,7 +9,6 @@ interface CalculatorFormField {
 const CalculatorFormField = ({
     label,
     className,
-    placeholder,
     ...props
 }: CalculatorFormField & React.InputHTMLAttributes<HTMLElement>) => {
     return <div className="mb-4">
@@ -22,9 +21,7 @@ const CalculatorFormField = ({
             {label}
         </label>
         <Input
-            id="initialInvestment"
             type="number"
-            placeholder={placeholder}
             {...props}
         />
     </div>

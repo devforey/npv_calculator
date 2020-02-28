@@ -1,6 +1,10 @@
 import React from 'react';
 
-const CalculatorResultPanel = () => {
+interface CalculatorResultPanelProps {
+    result?: number
+}
+
+const CalculatorResultPanel = ({ result }: CalculatorResultPanelProps) => {
     return <div className="
         overflow-auto
 
@@ -25,7 +29,7 @@ const CalculatorResultPanel = () => {
             block
             font-mono
         ">
-            200,000.00
+            { result === undefined ? '--' : result }
         </h1>
     </div>;
 };
