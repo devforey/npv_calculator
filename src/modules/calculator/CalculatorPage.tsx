@@ -1,21 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import CalculatorPanel, { CalculatorFormData } from './components/calculator-panel/CalculatorPanel';
 import CalculatorResultPanel from './components/calculator-result-panel/CalculatorResultPanel';
-import CalculatorService from './services/calculator-service';
-import CalculatorMapper from './services/calculator-mapper';
+import useCalculator from './hooks/use-calculator';
 
 const CalculatorPage = () => {
-    const [calculatorFormData, setCalculatorFormData] = useState<CalculatorFormData>({});
-    const [calculatorResult, setCalculatorResult] = useState<number | undefined>(0);
-
-    const calculatorService = CalculatorService();
-    const calculatorMapper = CalculatorMapper();
-    
-    useEffect(() => {
-        const calculatorInputModel = calculatorMapper.mapFormData(calculatorFormData);
-        const netPresentValue = calculatorService.calculate(calculatorInputModel);
-        setCalculatorResult(netPresentValue);
-    }, [calculatorFormData, calculatorMapper, calculatorService]);
+    const [
+        calculatorFormData, 
+        setCalculatorFormData,
+        calculatorResult
+    ] = useCalculator({} as CalculatorFormData);
 
     const render = () => {
         return <div className="
